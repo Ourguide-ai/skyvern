@@ -22,7 +22,7 @@ Copy example env file:
 cp .env.example .env
 ```
 
-Populate `VITE_SKYVERN_API_KEY` with your API key.
+Populate `VITE_ARGIDE_API_KEY` with your API key (legacy `VITE_SKYVERN_API_KEY` still works).
 
 Then run:
 

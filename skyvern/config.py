@@ -4,7 +4,7 @@ import platform
 from pathlib import Path
 from typing import Any
 
-from pydantic import Field
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from skyvern import constants
@@ -500,7 +500,12 @@ class Settings(BaseSettings):
     SKYVERN_APP_URL: str = "http://localhost:8080"
     # SkyvernClient Settings
     SKYVERN_BASE_URL: str = "https://api.skyvern.com"
-    SKYVERN_API_KEY: str = "PLACEHOLDER"
+    # Operator-facing env var: prefer ARGIDE_API_KEY, accept legacy SKYVERN_API_KEY.
+    # The Python attribute name stays SKYVERN_API_KEY (internal; not operator-facing).
+    SKYVERN_API_KEY: str = Field(
+        "PLACEHOLDER",
+        validation_alias=AliasChoices("ARGIDE_API_KEY", "SKYVERN_API_KEY"),
+    )
 
     SKYVERN_BROWSER_VNC_PORT: int = 6080
     """

@@ -21,7 +21,7 @@ function getCopy(status: BannerStatus): { title: string; description: string } {
       return {
         title: "Frontend API key missing",
         description:
-          "The UI is not sending an x-api-key header. The backend server can still run locally, but authenticated requests from the UI will fail until VITE_SKYVERN_API_KEY is set or a runtime key is stored.",
+          "The UI is not sending an x-api-key header. The backend server can still run locally, but authenticated requests from the UI will fail until VITE_ARGIDE_API_KEY is set or a runtime key is stored.",
       };
     case "invalid_format":
       return {
@@ -176,7 +176,7 @@ function SelfHealApiKeyBanner() {
           {bannerStatus !== "error" ? (
             <>
               <p>
-                {copy.description} Update <code>VITE_SKYVERN_API_KEY</code> in{" "}
+                {copy.description} Update <code>VITE_ARGIDE_API_KEY</code> in{" "}
                 <code className="mx-1">skyvern-frontend/.env</code>
                 by running <code>skyvern init</code> or click the button below
                 to regenerate it automatically.

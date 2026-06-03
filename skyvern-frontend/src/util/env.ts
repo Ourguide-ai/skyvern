@@ -14,10 +14,14 @@ const browserStreamingMode = (
   (import.meta.env.VITE_BROWSER_STREAMING_MODE as string | undefined) || "vnc"
 ).toLowerCase();
 
+// Prefer VITE_ARGIDE_API_KEY (baked by the Docker image / new .env); fall back to
+// the legacy VITE_SKYVERN_API_KEY so existing local .env files keep working.
 const buildTimeApiKey: string | null =
-  typeof import.meta.env.VITE_SKYVERN_API_KEY === "string"
-    ? import.meta.env.VITE_SKYVERN_API_KEY
-    : null;
+  typeof import.meta.env.VITE_ARGIDE_API_KEY === "string"
+    ? import.meta.env.VITE_ARGIDE_API_KEY
+    : typeof import.meta.env.VITE_SKYVERN_API_KEY === "string"
+      ? import.meta.env.VITE_SKYVERN_API_KEY
+      : null;
 
 const artifactApiBaseUrl = import.meta.env.VITE_ARTIFACT_API_BASE_URL;
 
@@ -80,12 +84,13 @@ function getRuntimeApiKey(): string | null {
 
   // Treat placeholder / example values as missing so they are never sent
   // as real credentials (e.g. from .env.example or an un-replaced Docker placeholder).
-  const PLACEHOLDER_VALUES = [
-    "YOUR_API_KEY",
-    "__SKYVERN_API_KEY_PLACEHOLDER__",
-  ];
-  runtimeApiKey =
-    candidate && PLACEHOLDER_VALUES.includes(candidate) ? null : candidate;
+  // NOTE: match the Docker placeholder by suffix rather than storing its literal
+  // string. The UI entrypoint does a global `sed s|__SKYVERN_API_KEY_PLACEHOLDER__|<key>|g`
+  // over the built JS at container start; a literal here would be rewritten into the
+  // real key, causing a valid key to be rejected as a placeholder (no x-api-key sent).
+  const isUnusableKey = (value: string): boolean =>
+    value === "YOUR_API_KEY" || /_PLACEHOLDER__$/.test(value);
+  runtimeApiKey = candidate && isUnusableKey(candidate) ? null : candidate;
   return runtimeApiKey;
 }
 
