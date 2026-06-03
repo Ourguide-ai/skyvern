@@ -25,19 +25,19 @@ function getCopy(status: BannerStatus): { title: string; description: string } {
       };
     case "invalid_format":
       return {
-        title: "Skyvern API key is invalid",
+        title: "Argide API key is invalid",
         description:
           "The configured key cannot be decoded. Regenerate a new key to continue using the UI.",
       };
     case "invalid":
       return {
-        title: "Skyvern API key not recognized",
+        title: "Argide API key not recognized",
         description:
           "The backend rejected the configured key. Regenerate it to refresh local auth.",
       };
     case "expired":
       return {
-        title: "Skyvern API key expired",
+        title: "Argide API key expired",
         description:
           "The current key is no longer valid. Generate a fresh key to restore connectivity.",
       };
@@ -45,18 +45,18 @@ function getCopy(status: BannerStatus): { title: string; description: string } {
       return {
         title: "Local organization missing",
         description:
-          "The backend could not find the Skyvern-local organization. Regenerate the key to recreate it.",
+          "The backend could not find the local organization. Regenerate the key to recreate it.",
       };
     case "request_auth_error":
       return {
-        title: "Skyvern API requests are unauthorized",
+        title: "Argide API requests are unauthorized",
         description:
           "The backend rejected a UI request. This usually means the frontend API key, backend API key, and local Docker database are out of sync.",
       };
     case "error":
     default:
       return {
-        title: "Unable to verify Skyvern API key",
+        title: "Unable to verify Argide API key",
         description:
           "The UI could not reach the diagnostics endpoint. Ensure the backend is running locally.",
       };

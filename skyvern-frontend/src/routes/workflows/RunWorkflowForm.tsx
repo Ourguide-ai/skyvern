@@ -887,7 +887,7 @@ function RunWorkflowForm({
                           Proxy Location
                         </div>
                         <h2 className="text-sm text-slate-400">
-                          Route Skyvern through one of our available proxies.
+                          Route Argide through one of our available proxies.
                         </h2>
                       </div>
                     </FormLabel>
@@ -951,7 +951,7 @@ function RunWorkflowForm({
                             <SelectValue placeholder="Run Method" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="agent">Skyvern Agent</SelectItem>
+                            <SelectItem value="agent">Argide Agent</SelectItem>
                             <SelectItem value="code">Code</SelectItem>
                           </SelectContent>
                         </Select>

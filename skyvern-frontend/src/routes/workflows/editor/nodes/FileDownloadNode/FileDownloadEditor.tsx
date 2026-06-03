@@ -36,11 +36,11 @@ import {
 } from "../../workflowEditorUtils";
 
 const urlTooltip =
-  "The URL Skyvern is navigating to. Leave this field blank to pick up from where the last block left off.";
+  "The URL Argide is navigating to. Leave this field blank to pick up from where the last block left off.";
 const urlPlaceholder = "https://";
 const navigationGoalTooltip =
-  "Give Skyvern an objective that describes how to download the file.";
-const navigationGoalPlaceholder = "Tell Skyvern which file to download.";
+  "Give Argide an objective that describes how to download the file.";
+const navigationGoalPlaceholder = "Tell Argide which file to download.";
 
 function FileDownloadEditor({ blockId }: { blockId: string }) {
   // Subscribe to this node's data slice. The sidebar mount lives outside the

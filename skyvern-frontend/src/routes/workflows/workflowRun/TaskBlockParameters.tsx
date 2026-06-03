@@ -114,7 +114,7 @@ function TaskBlockParameters({ block, definitionBlock }: Props) {
           <div className="w-80">
             <h1 className="text-lg">Navigation Goal</h1>
             <h2 className="text-base text-slate-400">
-              What should Skyvern do on this page?
+              What should Argide do on this page?
             </h2>
           </div>
           <AutoResizingTextarea value={block.navigation_goal ?? ""} readOnly />

@@ -25,13 +25,13 @@ type Props = {
 const allEngineOptions: Array<EngineOption> = [
   {
     value: RunEngine.SkyvernV1,
-    label: "Skyvern 1.0",
+    label: "Argide 1.0",
     badge: "Recommended",
     badgeVariant: "success",
   },
   {
     value: RunEngine.SkyvernV2,
-    label: "Skyvern 2.0",
+    label: "Argide 2.0",
     badge: "Legacy",
     badgeVariant: "default",
   },

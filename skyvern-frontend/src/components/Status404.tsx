@@ -16,9 +16,6 @@ function Status404() {
           </div>
         </div>
       </div>
-      <div className="absolute flex h-full w-full items-center justify-center">
-        <img src="/404-sad-dragon-md.png" alt="404 Not Found" />
-      </div>
     </div>
   );
 }

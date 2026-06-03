@@ -58,7 +58,7 @@ function Settings() {
                   <SelectValue placeholder="Organization" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="skyvern">Skyvern</SelectItem>
+                  <SelectItem value="skyvern">Argide</SelectItem>
                 </SelectContent>
               </Select>
             </div>

@@ -187,7 +187,7 @@ function WorkflowSettingsEditorBody({
       <div className="space-y-2">
         <div className="flex gap-2">
           <Label>Proxy Location</Label>
-          <HelpTooltip content="Route Skyvern through one of our available proxies." />
+          <HelpTooltip content="Route Argide through one of our available proxies." />
         </div>
         <ProxySelector
           value={data.proxyLocation}
@@ -199,7 +199,7 @@ function WorkflowSettingsEditorBody({
           <div className="flex justify-between">
             <div className="flex items-center gap-2">
               <Label>Run With</Label>
-              <HelpTooltip content="If code has been generated and saved from a previously successful run, set this to 'Code' to use that code when executing the agent. To avoid using code, set this to 'Skyvern Agent'." />
+              <HelpTooltip content="If code has been generated and saved from a previously successful run, set this to 'Code' to use that code when executing the agent. To avoid using code, set this to 'Argide Agent'." />
             </div>
             <Select
               value={data.runWith || "agent"}
@@ -209,7 +209,7 @@ function WorkflowSettingsEditorBody({
                 <SelectValue placeholder="Run Method" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="agent">Skyvern Agent</SelectItem>
+                <SelectItem value="agent">Argide Agent</SelectItem>
                 <SelectItem value="code">Code</SelectItem>
               </SelectContent>
             </Select>

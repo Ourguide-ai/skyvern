@@ -1,6 +1,5 @@
 import { Logo } from "@/components/Logo";
 import { LogoMinimized } from "@/components/LogoMinimized";
-import { SidebarResourceLinks } from "@/components/SidebarResourceLinks";
 import { ThemeToggle } from "@/components/ThemeSwitch";
 import { useSidebarStore } from "@/store/SidebarStore";
 import { Link } from "react-router-dom";
@@ -8,7 +7,6 @@ import { SideNav } from "./SideNav";
 import { cn } from "@/util/utils";
 import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
-import { useSidebarHidden } from "./useSidebarHidden";
 
 type Props = {
   useCollapsedState?: boolean;
@@ -17,7 +15,6 @@ type Props = {
 function SidebarContent({ useCollapsedState }: Props) {
   const { collapsed: collapsedState, setCollapsed } = useSidebarStore();
   const collapsed = useCollapsedState ? collapsedState : false;
-  const sidebarHidden = useSidebarHidden({ hideBrowserSessions: true });
 
   return (
     <div className="flex h-full flex-col overflow-y-auto">
@@ -43,7 +40,6 @@ function SidebarContent({ useCollapsedState }: Props) {
       >
         <SideNav collapsed={collapsed} />
       </div>
-      {!sidebarHidden ? <SidebarResourceLinks collapsed={collapsed} /> : null}
       <div
         className={cn(
           "mt-auto flex min-h-14 items-center border-t border-neutral-200 dark:border-white/[0.06]",

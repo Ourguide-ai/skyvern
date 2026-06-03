@@ -13,7 +13,7 @@ function GotoUrlBlockParameters({ url, continueOnFailure }: Props) {
         <div className="w-80">
           <h1 className="text-lg">URL</h1>
           <h2 className="text-base text-slate-400">
-            The destination Skyvern navigates to
+            The destination Argide navigates to
           </h2>
         </div>
         <Input value={url} readOnly />

@@ -416,7 +416,7 @@ function PromptBox({ enableCopilotHandoff = false }: PromptBoxProps) {
                     <div className="w-48 shrink-0">
                       <div className="text-sm">Proxy Location</div>
                       <div className="text-xs text-muted-foreground">
-                        Route Skyvern through one of our available proxies.
+                        Route Argide through one of our available proxies.
                       </div>
                     </div>
                     <ProxySelector

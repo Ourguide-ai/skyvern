@@ -979,7 +979,7 @@ function CredentialsModal({
         >
           Store in Custom Credential Service
         </Label>
-        <HelpTooltip content="Store this credential in your external credential service instead of the default Skyvern vault." />
+        <HelpTooltip content="Store this credential in your external credential service instead of the default Argide vault." />
       </div>
     ) : undefined;
 
@@ -1015,7 +1015,7 @@ function CredentialsModal({
                 >
                   Save browser session for future logins
                 </Label>
-                <HelpTooltip content="Skyvern will log in using your credentials, verify success, and save the browser session. Future agent runs will skip the login form entirely because the saved session is already authenticated." />
+                <HelpTooltip content="Argide will log in using your credentials, verify success, and save the browser session. Future agent runs will skip the login form entirely because the saved session is already authenticated." />
               </div>
 
               {testAndSave && (
@@ -1054,7 +1054,7 @@ function CredentialsModal({
                       className="flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300"
                     >
                       <ExternalLinkIcon className="size-3" />
-                      Watch Skyvern test login live
+                      Watch Argide test login live
                     </a>
                   )}
                 </div>

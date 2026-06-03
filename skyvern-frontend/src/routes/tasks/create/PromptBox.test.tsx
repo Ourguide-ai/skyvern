@@ -152,7 +152,7 @@ describe("PromptBox", () => {
 
     renderPromptBox();
 
-    expect(screen.queryByText("Skyvern 2.0")).toBeNull();
+    expect(screen.queryByText("Argide 2.0")).toBeNull();
 
     fireEvent.change(screen.getByPlaceholderText("Enter your prompt..."), {
       target: { value: "Visit the docs" },

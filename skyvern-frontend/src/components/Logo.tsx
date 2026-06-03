@@ -1,6 +1,6 @@
 function Logo() {
-  const src = "/logo.png";
-  return <img src={src} alt="Logo" />;
+  const src = "/logo.svg";
+  return <img src={src} alt="Argide" />;
 }
 
 export { Logo };

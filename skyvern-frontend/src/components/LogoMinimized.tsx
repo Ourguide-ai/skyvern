@@ -1,6 +1,6 @@
 function LogoMinimized() {
-  const src = "/logo-small.png";
-  return <img src={src} alt="Minimized Logo" />;
+  const src = "/logo-small.svg";
+  return <img src={src} alt="Argide" />;
 }
 
 export { LogoMinimized };

@@ -370,7 +370,7 @@ function BrowserSessions() {
                 <div className="space-y-2">
                   <div className="flex gap-2">
                     <Label>Proxy Location</Label>
-                    <HelpTooltip content="Route Skyvern through one of our available proxies." />
+                    <HelpTooltip content="Route Argide through one of our available proxies." />
                   </div>
                   <ProxySelector
                     value={sessionOptions.proxyLocation}

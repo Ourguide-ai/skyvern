@@ -39,9 +39,7 @@ function OrgWalled({
         </TooltipTrigger>
         {!hideTooltipContent && (
           <TooltipContent>
-            <p>
-              This feature is only available to Skyvern organization members
-            </p>
+            <p>This feature is only available to Argide organization members</p>
           </TooltipContent>
         )}
       </Tooltip>

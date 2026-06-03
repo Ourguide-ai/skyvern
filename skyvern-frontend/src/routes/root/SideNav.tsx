@@ -27,7 +27,6 @@ import { KeyIcon } from "@/components/icons/KeyIcon";
 import { LogisticsIcon } from "@/components/icons/LogisticsIcon";
 import { N8nIcon } from "@/components/icons/N8nIcon";
 import { ReceiptIcon } from "@/components/icons/ReceiptIcon";
-import { RobotIcon } from "@/components/icons/RobotIcon";
 import {
   SidebarTreeNav,
   type SidebarNavItem,
@@ -235,12 +234,6 @@ function SideNav({ collapsed }: Props = {}) {
       icon: <Share1Icon className="size-4" />,
       defaultOpen: false,
       children: [
-        {
-          label: "MCP",
-          to: "https://www.skyvern.com/docs/developers/getting-started/mcp",
-          external: true,
-          icon: <RobotIcon className="size-3.5" />,
-        },
         {
           label: "1Password",
           to: "/integrations?query=1Password",

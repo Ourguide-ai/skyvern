@@ -108,7 +108,7 @@ function PushTotpCodeForm({
     onSuccess: () => {
       toast({
         title: "2FA code sent",
-        description: "Skyvern will process it shortly.",
+        description: "Argide will process it shortly.",
       });
       setContent("");
       onSuccess?.();

@@ -285,9 +285,9 @@ function NavigationEditorBody({
           <div className="rounded-md border border-neutral-200 bg-neutral-100 p-2 dark:border-slate-700/50 dark:bg-slate-800">
             <div className="space-y-1 text-xs text-neutral-600 dark:text-slate-400">
               Tip: Try to phrase your prompt as a goal with an explicit
-              completion criteria. While executing, Skyvern will take as many
+              completion criteria. While executing, Argide will take as many
               actions as necessary to accomplish the goal. Use words like
-              "Complete" or "Terminate" to help Skyvern identify when it's
+              "Complete" or "Terminate" to help Argide identify when it's
               finished or when it should give up.
             </div>
           </div>

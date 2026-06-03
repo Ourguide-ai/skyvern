@@ -79,7 +79,7 @@ function getAvailableSourcesForDataType(
   switch (dataType) {
     case "password":
       return [
-        ...(isCloud ? [{ value: "skyvern" as const, label: "Skyvern" }] : []),
+        ...(isCloud ? [{ value: "skyvern" as const, label: "Argide" }] : []),
         { value: "bitwarden" as const, label: "Bitwarden" },
         { value: "onepassword" as const, label: "1Password" },
         { value: "azurevault" as const, label: "Azure Key Vault" },
@@ -87,13 +87,13 @@ function getAvailableSourcesForDataType(
       ];
     case "secret":
       return [
-        ...(isCloud ? [{ value: "skyvern" as const, label: "Skyvern" }] : []),
+        ...(isCloud ? [{ value: "skyvern" as const, label: "Argide" }] : []),
         { value: "bitwarden" as const, label: "Bitwarden" },
         ...customOption,
       ];
     case "creditCard":
       return [
-        ...(isCloud ? [{ value: "skyvern" as const, label: "Skyvern" }] : []),
+        ...(isCloud ? [{ value: "skyvern" as const, label: "Argide" }] : []),
         { value: "bitwarden" as const, label: "Bitwarden" },
         { value: "onepassword" as const, label: "1Password" },
         ...customOption,
@@ -507,7 +507,7 @@ function WorkflowParameterEditPanel({
               <div className="space-y-1">
                 <div className="flex gap-2">
                   <Label className="text-xs text-slate-300">Source</Label>
-                  <HelpTooltip content="Select the storage location for your credentials. Skyvern supports managed credentials such as Bitwarden, 1Password, and Azure Key Vault that connect directly to your vault. If you use a custom external credential service, you can add it here as well." />
+                  <HelpTooltip content="Select the storage location for your credentials. Argide supports managed credentials such as Bitwarden, 1Password, and Azure Key Vault that connect directly to your vault. If you use a custom external credential service, you can add it here as well." />
                 </div>
                 <Select
                   value={credentialSource}
@@ -540,7 +540,7 @@ function WorkflowParameterEditPanel({
                   <Label className="text-xs text-slate-300">
                     URL Parameter Key
                   </Label>
-                  <HelpTooltip content="Optional. The agent input key that holds the URL. If provided, Skyvern will match the credential based on this URL." />
+                  <HelpTooltip content="Optional. The agent input key that holds the URL. If provided, Argide will match the credential based on this URL." />
                 </div>
                 <Input
                   value={urlParameterKey}
@@ -748,9 +748,9 @@ function WorkflowParameterEditPanel({
             <div className="space-y-1">
               <div className="flex gap-2">
                 <Label className="text-xs text-slate-300">
-                  Skyvern Credential
+                  Argide Credential
                 </Label>
-                <HelpTooltip content="Select a credential from your Skyvern credential store. These are managed credentials you've previously added to Skyvern." />
+                <HelpTooltip content="Select a credential from your Argide credential store. These are managed credentials you've previously added to Argide." />
               </div>
               <CredentialParameterSourceSelector
                 value={credentialId}

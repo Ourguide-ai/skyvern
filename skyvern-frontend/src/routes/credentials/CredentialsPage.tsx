@@ -182,17 +182,7 @@ function CredentialsPage() {
               this community version
             </a>{" "}
             or a paid Bitwarden account. Make sure the relevant
-            `SKYVERN_AUTH_BITWARDEN_*` environment variables are configured. See
-            details{" "}
-            <a
-              href="https://docs.skyvern.com/credentials/bitwarden"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 underline hover:text-blue-300"
-            >
-              here
-            </a>
-            .
+            `SKYVERN_AUTH_BITWARDEN_*` environment variables are configured.
           </div>
         </div>
       )}

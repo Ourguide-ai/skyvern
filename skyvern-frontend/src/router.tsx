@@ -45,54 +45,54 @@ const recipeComingSoonRoutes = [
     path: "recipes/invoices",
     title: "Invoices",
     description:
-      "Skyvern's Invoices Agent allows you to automate invoice collection and downloads with agents",
+      "Argide's Invoices Agent allows you to automate invoice collection and downloads with agents",
   },
   {
     path: "recipes/government",
     title: "Government",
     description:
-      "Skyvern's Government Agent allows you to navigate any government websites",
+      "Argide's Government Agent allows you to navigate any government websites",
   },
   {
     path: "recipes/healthcare",
     title: "Healthcare",
     description:
-      "Skyvern's Healthcare Agent allows you to automate work with healthcare websites",
+      "Argide's Healthcare Agent allows you to automate work with healthcare websites",
   },
   {
     path: "recipes/insurance",
     title: "Insurance",
     description:
-      "Skyvern's Insurance Agent allows you to automate work with insurance websites",
+      "Argide's Insurance Agent allows you to automate work with insurance websites",
   },
   {
     path: "recipes/purchasing",
     title: "Purchasing",
     description:
-      "Skyvern's Purchasing Agent allows you to make payments on the web",
+      "Argide's Purchasing Agent allows you to make payments on the web",
   },
   {
     path: "recipes/crm",
     title: "CRM",
-    description: "Skyvern's CRM Agent allows you to navigate any CRM",
+    description: "Argide's CRM Agent allows you to navigate any CRM",
   },
   {
     path: "recipes/logistics",
     title: "Logistics",
     description:
-      "Skyvern's Logistics Agent allows you to automate work with logistics websites",
+      "Argide's Logistics Agent allows you to automate work with logistics websites",
   },
   {
     path: "recipes/contact-forms",
     title: "Contact Forms",
     description:
-      "Skyvern's Contact Forms Agent allows you to submit contact forms across websites",
+      "Argide's Contact Forms Agent allows you to submit contact forms across websites",
   },
   {
     path: "recipes/job-apps",
     title: "Job Apps",
     description:
-      "Skyvern's Job Apps Agent allows you to automate job applications with agents",
+      "Argide's Job Apps Agent allows you to automate job applications with agents",
   },
 ].map(({ path, title, description }) => ({
   path,

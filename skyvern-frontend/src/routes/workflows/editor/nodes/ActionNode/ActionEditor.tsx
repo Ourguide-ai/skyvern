@@ -36,9 +36,9 @@ import {
 } from "../../workflowEditorUtils";
 
 const urlTooltip =
-  "The URL Skyvern is navigating to. Leave this field blank to pick up from where the last block left off.";
+  "The URL Argide is navigating to. Leave this field blank to pick up from where the last block left off.";
 const navigationGoalTooltip =
-  "Specify a single step or action you'd like Skyvern to complete. Actions are one-off tasks like filling a field or interacting with a specific element on the page.\n\nCurrently supported actions are click, input text, upload file, and select. Use {{ parameter_name }} to specify inputs to use.";
+  "Specify a single step or action you'd like Argide to complete. Actions are one-off tasks like filling a field or interacting with a specific element on the page.\n\nCurrently supported actions are click, input text, upload file, and select. Use {{ parameter_name }} to specify inputs to use.";
 const navigationGoalPlaceholder = 'Input {{ name }} into "Name" field.';
 
 function ActionEditor({ blockId }: { blockId: string }) {
@@ -116,7 +116,7 @@ function ActionEditorBody({
       {!hasInteracted && (
         <div className="workflow-editor-tip rounded-md bg-slate-800 p-2">
           <div className="space-y-1 text-xs text-slate-400">
-            Tip: While executing the action block, Skyvern will only take one
+            Tip: While executing the action block, Argide will only take one
             action.
           </div>
         </div>

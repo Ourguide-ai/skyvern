@@ -296,7 +296,7 @@ function PasswordCredentialContent({
           <AccordionContent>
             <div className="space-y-4">
               <p className="text-sm text-slate-400">
-                Set up Skyvern to automatically retrieve two-factor
+                Set up Argide to automatically retrieve two-factor
                 authentication codes.
               </p>
               <div className="grid h-36 grid-cols-3 gap-4">
@@ -370,26 +370,8 @@ function PasswordCredentialContent({
                     </p>
                   </div>
                   <p className="text-sm text-slate-400">
-                    <Link
-                      to="https://www.skyvern.com/contact"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline underline-offset-2"
-                    >
-                      Contact us to set up two-factor authentication in
-                      workflows
-                    </Link>{" "}
-                    or{" "}
-                    <Link
-                      to="https://www.skyvern.com/docs/running-tasks/advanced-features#time-based-one-time-password-totp"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline underline-offset-2"
-                    >
-                      see our documentation on how to set up two-factor
-                      authentication in workflows
-                    </Link>{" "}
-                    to get started.
+                    Set up two-factor authentication in workflows to get
+                    started.
                   </p>
                 </>
               )}

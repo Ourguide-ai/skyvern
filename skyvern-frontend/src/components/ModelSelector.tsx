@@ -23,7 +23,7 @@ type Props = {
 };
 
 const constants = {
-  SkyvernOptimized: "Skyvern Optimized",
+  SkyvernOptimized: "Argide Optimized",
 } as const;
 
 const deprecatedModelNames = new Set<string>([
@@ -125,7 +125,7 @@ function ModelSelector({
             {choices.map((m) => (
               <SelectItem key={m} value={m}>
                 {m === constants.SkyvernOptimized ? (
-                  <span>Skyvern Optimized ✨</span>
+                  <span>Argide Optimized ✨</span>
                 ) : (
                   m
                 )}

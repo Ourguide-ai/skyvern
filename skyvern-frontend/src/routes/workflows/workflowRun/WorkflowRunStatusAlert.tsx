@@ -93,19 +93,13 @@ function WorkflowRunStatusAlert({ status, title, visible }: Props) {
       return;
     }
 
-    const audio = new Audio("/dragon-cry.mp3");
-
-    audio.play().catch((error) => {
-      console.error("Failed to play notification sound:", error);
-    });
-
     if (Notification.permission === "granted") {
       try {
         const notification = new Notification(
           `Agent Run Status Change: ${status}`,
           {
             body: `The agent run "${title ?? "unknown"}" has changed to status: ${status}`,
-            icon: "/favicon.png",
+            icon: "/favicon.svg",
             tag: `workflow-${title ?? "unknown"}-${status}`,
             requireInteraction: false,
           },
