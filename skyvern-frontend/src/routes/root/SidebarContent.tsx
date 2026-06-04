@@ -21,7 +21,7 @@ function SidebarContent({ useCollapsedState }: Props) {
       <Link to={window.location.origin}>
         <div
           className={cn(
-            "flex h-20 items-center [&>img]:brightness-0 dark:[&>img]:brightness-100",
+            "flex h-20 items-center dark:[&>img]:invert",
             {
               "w-16 justify-center px-0 [&>img]:size-9 [&>img]:object-contain":
                 collapsed,

@@ -99,7 +99,7 @@ function WorkflowRunStatusAlert({ status, title, visible }: Props) {
           `Agent Run Status Change: ${status}`,
           {
             body: `The agent run "${title ?? "unknown"}" has changed to status: ${status}`,
-            icon: "/favicon.svg",
+            icon: "/favicon.ico",
             tag: `workflow-${title ?? "unknown"}-${status}`,
             requireInteraction: false,
           },

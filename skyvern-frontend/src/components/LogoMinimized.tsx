@@ -1,6 +1,5 @@
 function LogoMinimized() {
-  const src = "/logo-small.svg";
-  return <img src={src} alt="Argide" />;
+  return <img src="/argide-logo.png" alt="Argide" style={{ height: "24px" }} />;
 }
 
 export { LogoMinimized };

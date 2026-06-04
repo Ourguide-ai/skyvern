@@ -93,7 +93,7 @@ function useVerificationCodeAlert({
         try {
           const notification = new Notification("2FA Code Required", {
             body: `${label} needs a verification code to continue.`,
-            icon: "/favicon.svg",
+            icon: "/favicon.ico",
             tag: notificationTag,
             requireInteraction: true,
           });
