@@ -5535,7 +5535,7 @@ class HumanInteractionBlock(BaseTaskBlock):
     timeout_seconds: int = 60 * 60 * 2  # two hours
 
     # email options
-    sender: str = "hello@skyvern.com"
+    sender: str = "support@argide.ai"
     recipients: list[str] = []
     subject: str = "Human interaction required for workflow run"
     body: str = "Your interaction is required for a workflow run!"

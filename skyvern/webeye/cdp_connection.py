@@ -228,8 +228,8 @@ def build_cdp_configuration_error(
         return None
 
     guidance = (
-        f"Skyvern reached the configured CDP address ({remote_browser_url}), but "
-        f"{discovery_url} returned HTTP {status_code}. Skyvern cdp-connect requires "
+        f"Argide reached the configured CDP address ({remote_browser_url}), but "
+        f"{discovery_url} returned HTTP {status_code}. Argide cdp-connect requires "
         "Chrome's classic DevTools Protocol endpoint, where /json/version returns JSON "
         "with webSocketDebuggerUrl. If you enabled chrome://inspect/#remote-debugging, "
         "set BROWSER_REMOTE_DEBUGGING_URL to the direct full "

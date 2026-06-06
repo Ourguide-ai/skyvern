@@ -56,7 +56,7 @@ async def build_scraping_failed_reason(browser_state: BrowserState, requested_ur
         LOG.debug("Could not resolve landed URL for ScrapingFailed reason", exc_info=True)
 
     base = (
-        "Skyvern failed to load the website. "
+        "Argide failed to load the website. "
         "The page may have navigated unexpectedly or become unresponsive during analysis."
     )
     if safe_landed and safe_landed != safe_requested and safe_landed not in {"about:blank", ""}:

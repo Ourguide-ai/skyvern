@@ -1140,7 +1140,7 @@ class ForgeAgent:
                 task,
                 step,
                 sfe.reason
-                or "Skyvern failed to load the website. The page may have navigated unexpectedly or become unresponsive during analysis.",
+                or "Argide failed to load the website. The page may have navigated unexpectedly or become unresponsive during analysis.",
                 browser_state,
                 exception=sfe,
             )

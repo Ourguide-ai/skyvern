@@ -364,7 +364,7 @@ async def run_task(
         except LLMProviderError:
             LOG.error("LLM failure to initialize task v2", exc_info=True)
             raise HTTPException(
-                status_code=500, detail="Skyvern LLM failure to initialize task v2. Please try again later."
+                status_code=500, detail="Argide LLM failure to initialize task v2. Please try again later."
             )
         if settings.OTEL_ENABLED:
             span = trace.get_current_span()
@@ -4360,7 +4360,7 @@ async def run_task_v2(
     except LLMProviderError:
         LOG.error("LLM failure to initialize task v2", exc_info=True)
         raise HTTPException(
-            status_code=500, detail="Skyvern LLM failure to initialize task v2. Please try again later."
+            status_code=500, detail="Argide LLM failure to initialize task v2. Please try again later."
         )
     analytics.capture("skyvern-oss-agent-task-v2", data={"url": task_v2.url})
     await AsyncExecutorFactory.get_executor().execute_task_v2(

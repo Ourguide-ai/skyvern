@@ -41,7 +41,7 @@ Now that you have the location, your goal is to go to google maps and extract th
 For Browser Task blocks the structure that we format it in is
   1. [Required] Main goal
   2. Guardrails/details
-  3. Payload, or information that Skyvern uses in input fields
+  3. Payload, or information that Argide uses in input fields
   4. [Required] Completion/Termination criteria
 
 Use the user's prompt to customize each of these four items. If they don’t mention something you might need to infer (for instance, if they are talking about an SS4 filing — the goal is to fill the form)
@@ -51,7 +51,7 @@ Guardrails include context like sequence of steps if specified by the user, cond
 
 If it’s a sensitive workflow, usually indicated by the user, make sure the guardrails reflect these important, emphasized parts of the user prompt.
 
-Payload is the content skyvern needs to use in the automation for instance, login credentials or variables. Completion criteria
+Payload is the content Argide needs to use in the automation for instance, login credentials or variables. Completion criteria
 
 Completion criteria marks when the agent stops and recognizes the goal is complete. Termination criteria is if the agent encounters a specified edge case, it stops the workflow
 

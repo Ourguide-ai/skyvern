@@ -33,12 +33,12 @@ def test_unknown_error_while_creating_browser_context_strips_call_log() -> None:
     assert "--proxy-server=" not in message
     assert "timed out after 180 seconds" in message
     assert "Please try re-running." in message
-    assert "support@skyvern.com" in message
+    assert "support@argide.ai" in message
 
 
 def test_unknown_error_preserves_cdp_configuration_guidance() -> None:
     inner_exception = CdpConnectionConfigurationError(
-        "Skyvern reached the configured CDP address, but /json/version returned HTTP 404. "
+        "Argide reached the configured CDP address, but /json/version returned HTTP 404. "
         "Start Chrome with --remote-debugging-port=9222."
     )
 
@@ -250,7 +250,7 @@ def test_unknown_error_display_server_missing_xserver() -> None:
     message = str(error)
     assert "browser display/graphics stack" in message
     assert "browser-environment issue" in message
-    assert "support@skyvern.com" in message
+    assert "support@argide.ai" in message
 
 
 def test_unknown_error_display_server_platform_failed() -> None:
@@ -296,7 +296,7 @@ def test_unknown_error_strips_browser_logs_with_internal_path() -> None:
     # SKY-9319: TargetClosedError-style failures now return a friendly retry message
     # instead of the raw Playwright string.
     assert "The browser closed unexpectedly during launch" in message
-    assert "support@skyvern.com" in message
+    assert "support@argide.ai" in message
 
 
 def test_unknown_error_timeout_with_browser_logs_still_formats_structured() -> None:

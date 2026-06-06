@@ -977,7 +977,7 @@ class BitwardenService:
             secret_key = BitwardenConstants.SKYVERN_AUTH_BITWARDEN_MASTER_PASSWORD
             master_password = await get_aws_client().get_secret(secret_key)
         if not master_password:
-            raise BitwardenSecretError("Skyvern auth master password is not set")
+            raise BitwardenSecretError("Argide auth master password is not set")
         return master_password
 
     @staticmethod
@@ -987,7 +987,7 @@ class BitwardenService:
             secret_key = BitwardenConstants.SKYVERN_AUTH_BITWARDEN_ORGANIZATION_ID
             bw_organization_id = await get_aws_client().get_secret(secret_key)
         if not bw_organization_id:
-            raise BitwardenSecretError("Skyvern auth organization ID is not set")
+            raise BitwardenSecretError("Argide auth organization ID is not set")
         return bw_organization_id
 
     @staticmethod
@@ -997,7 +997,7 @@ class BitwardenService:
             secret_key = BitwardenConstants.SKYVERN_AUTH_BITWARDEN_CLIENT_ID
             client_id = await get_aws_client().get_secret(secret_key)
         if not client_id:
-            raise BitwardenSecretError("Skyvern auth client ID is not set")
+            raise BitwardenSecretError("Argide auth client ID is not set")
         return client_id
 
     @staticmethod
@@ -1007,7 +1007,7 @@ class BitwardenService:
             secret_key = BitwardenConstants.SKYVERN_AUTH_BITWARDEN_CLIENT_SECRET
             client_secret = await get_aws_client().get_secret(secret_key)
         if not client_secret:
-            raise BitwardenSecretError("Skyvern auth client secret is not set")
+            raise BitwardenSecretError("Argide auth client secret is not set")
         return client_secret
 
     @staticmethod

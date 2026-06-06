@@ -1,10 +1,10 @@
-SKYVERN WORKFLOW YAML KNOWLEDGE BASE
+ARGIDE WORKFLOW YAML KNOWLEDGE BASE
 
-This document provides comprehensive information about Skyvern Workflow YAML structure and blocks. Use this to understand how to construct, modify, and validate workflow definitions.
+This document provides comprehensive information about Argide Workflow YAML structure and blocks. Use this to understand how to construct, modify, and validate workflow definitions.
 
 ** WORKFLOW STRUCTURE OVERVIEW **
 
-A Skyvern workflow is defined in YAML format with the following top-level structure
+A Argide workflow is defined in YAML format with the following top-level structure
 for a workflow definition (embedded under workflow_definition in full specs):
 
 title: "<workflow title>" # Required

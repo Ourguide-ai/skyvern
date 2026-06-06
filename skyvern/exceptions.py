@@ -110,7 +110,7 @@ class SkyvernHTTPException(SkyvernException):
         super().__init__(message)
 
 
-_BROWSER_CONNECTION_GUIDANCE = "Please try re-running. If this continues, contact support@skyvern.com."
+_BROWSER_CONNECTION_GUIDANCE = "Please try re-running. If this continues, contact support@argide.ai."
 
 # Patterns that indicate a browser session connection failure (e.g. CDP WebSocket errors).
 # These errors contain internal URLs and raw HTML that should never be shown to end users.
@@ -428,7 +428,7 @@ class CdpConnectionConfigurationError(SkyvernException):
 
 
 class UnknownErrorWhileCreatingBrowserContext(SkyvernException):
-    SUPPORT_GUIDANCE = "Please try re-running. If this continues, contact support@skyvern.com."
+    SUPPORT_GUIDANCE = "Please try re-running. If this continues, contact support@argide.ai."
 
     def __init__(self, browser_type: str, exception: Exception) -> None:
         exception_type = type(exception).__name__
@@ -545,7 +545,7 @@ class SkyvernActionFailed(SkyvernException):
 
 class ScrapingFailedBlankPage(ScrapingFailed):
     def __init__(self) -> None:
-        super().__init__(reason="It's a blank page. Please ensure there is a non-blank page for Skyvern to work with.")
+        super().__init__(reason="It's a blank page. Please ensure there is a non-blank page for Argide to work with.")
 
 
 class MissingStarterUrl(SkyvernException):
@@ -666,8 +666,8 @@ class BitwardenAccessDeniedError(BitwardenBaseError):
     def __init__(self) -> None:
         super().__init__(
             "Current organization does not have access to the specified Bitwarden collection. "
-            "Contact Skyvern support to enable access. This is a security layer on top of Bitwarden, "
-            "Skyvern team needs to let your Skyvern account access the Bitwarden collection."
+            "Contact Argide support to enable access. This is a security layer on top of Bitwarden, "
+            "Argide team needs to let your Argide account access the Bitwarden collection."
         )
 
 
@@ -681,7 +681,7 @@ class OnePasswordServiceUnavailableError(OnePasswordBaseError):
         suffix = f" (HTTP {status_code})" if status_code else ""
         message = (
             f"1Password is currently unavailable{suffix}. "
-            "This is an upstream outage on 1Password's side, not a Skyvern issue. "
+            "This is an upstream outage on 1Password's side, not an Argide issue. "
             "Please retry in a few minutes."
         )
         if lookup_context:
@@ -966,7 +966,7 @@ class CachedActionPlanError(SkyvernException):
 
 class InvalidUrl(SkyvernHTTPException):
     def __init__(self, url: str) -> None:
-        super().__init__(f"Invalid URL: {url}. Skyvern supports HTTP and HTTPS urls with max 2083 character length.")
+        super().__init__(f"Invalid URL: {url}. Argide supports HTTP and HTTPS urls with max 2083 character length.")
 
 
 class BlockedHost(SkyvernHTTPException):
@@ -1096,7 +1096,7 @@ class SkyvernContextWindowExceededError(SkyvernException):
         if prompt_name:
             details.append(f"prompt: {prompt_name}")
         detail_str = f" ({', '.join(details)})" if details else ""
-        message = f"LLM context window exceeded{detail_str}. The page may have too much content for the AI model to process. Please try again or contact support@skyvern.com for help."
+        message = f"LLM context window exceeded{detail_str}. The page may have too much content for the AI model to process. Please try again or contact support@argide.ai for help."
         super().__init__(message)
 
 

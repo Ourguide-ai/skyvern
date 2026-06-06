@@ -28,7 +28,7 @@ from skyvern.forge.sdk.copilot.tools import (
 )
 
 _SCRAPE_WALL_REASON = (
-    "Skyvern failed to load the website. The page may have navigated "
+    "Argide failed to load the website. The page may have navigated "
     "unexpectedly or become unresponsive during analysis."
 )
 

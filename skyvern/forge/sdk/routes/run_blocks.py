@@ -171,7 +171,7 @@ async def login(
     resolved_totp_identifier = login_request.totp_identifier
     if login_request.credential_type == CredentialType.skyvern:
         if not login_request.credential_id:
-            raise HTTPException(status_code=400, detail="credential_id is required to login with Skyvern credential")
+            raise HTTPException(status_code=400, detail="credential_id is required to login with Argide credential")
         credential = await app.DATABASE.credentials.get_credential(
             login_request.credential_id, organization.organization_id
         )

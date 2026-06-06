@@ -1070,7 +1070,7 @@ async def generate_cua_fallback_actions(
                 )
                 reasoning_suffix = (
                     f"Configured TOTP source ({polled_source}) produced no code — "
-                    "check delivery endpoint or contact Skyvern support if the issue persists."
+                    "check delivery endpoint or contact Argide support if the issue persists."
                 )
                 reasoning = f"{reasoning}. {reasoning_suffix}" if reasoning else reasoning_suffix
                 action = TerminateAction(

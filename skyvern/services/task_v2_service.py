@@ -327,7 +327,7 @@ async def initialize_task_v2(
         task_v2 = await mark_task_v2_as_failed(
             task_v2_id=task_v2.observer_cruise_id,
             workflow_run_id=task_v2.workflow_run_id,
-            failure_reason="Skyvern failed to setup the workflow run",
+            failure_reason="Argide failed to setup the workflow run",
             organization_id=organization.organization_id,
         )
         raise
@@ -357,7 +357,7 @@ async def initialize_task_v2(
         task_v2 = await mark_task_v2_as_failed(
             task_v2_id=task_v2.observer_cruise_id,
             workflow_run_id=workflow_run.workflow_run_id,
-            failure_reason="Skyvern failed to update the task 2.0 after initializing the workflow run",
+            failure_reason="Argide failed to update the task 2.0 after initializing the workflow run",
             organization_id=organization.organization_id,
         )
         raise
@@ -453,7 +453,7 @@ async def initialize_task_v2_metadata(
         task_v2 = await mark_task_v2_as_failed(
             task_v2_id=task_v2.observer_cruise_id,
             workflow_run_id=workflow_run.workflow_run_id,
-            failure_reason="Skyvern failed to update the task 2.0 after initializing the workflow run",
+            failure_reason="Argide failed to update the task 2.0 after initializing the workflow run",
             organization_id=organization.organization_id,
         )
         raise
@@ -914,7 +914,7 @@ async def run_task_v2_helper(
                 task_v2 = await mark_task_v2_as_failed(
                     task_v2_id=task_v2_id,
                     workflow_run_id=workflow_run_id,
-                    failure_reason="Skyvern failed to generate a task. Please try again later.",
+                    failure_reason="Argide failed to generate a task. Please try again later.",
                 )
                 break
 

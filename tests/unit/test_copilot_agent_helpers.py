@@ -1249,7 +1249,7 @@ workflow_definition:
     def test_probable_site_block_ask_question_is_concise_and_proxy_aware(self) -> None:
         ctx = _ctx(
             last_test_ok=False,
-            last_test_failure_reason="Skyvern failed to load the website. The page may have navigated unexpectedly.",
+            last_test_failure_reason="Argide failed to load the website. The page may have navigated unexpectedly.",
             probable_site_block_stop_nudge_count=1,
             effective_workflow_proxy_location="RESIDENTIAL",
         )
@@ -1257,7 +1257,7 @@ workflow_definition:
             "Diagnostic recap:\n"
             "- I tried several workflow shapes with the same browser state.\n"
             '- global_llm_context: {"workflow_state": "many internal details"}\n'
-            "- The final failure_reason was: Skyvern failed to load the website. "
+            "- The final failure_reason was: Argide failed to load the website. "
             "The page may have navigated unexpectedly.\n"
             "- More implementation details that should not be user-facing.\n"
             "Would you like me to configure a proxy?"
@@ -1277,7 +1277,7 @@ workflow_definition:
         assert "Would you like me to whether" not in agent_result.user_response
         assert "different proxy location" in agent_result.user_response.lower()
         assert "US-CA" in agent_result.user_response
-        assert "Skyvern failed to load the website. The page may have navigated unexpectedly." in (
+        assert "Argide failed to load the website. The page may have navigated unexpectedly." in (
             agent_result.user_response
         )
         assert "same IP/workflow shape" in agent_result.user_response

@@ -192,7 +192,7 @@ def _probable_site_block_stop_nudge(ctx: Any, config: CopilotConfig | None = Non
 def _single_line_failure_reason(ctx: Any) -> str:
     reason = getattr(ctx, "last_test_failure_reason", None)
     if not isinstance(reason, str) or not reason.strip():
-        return "Skyvern failed to load the website."
+        return "Argide failed to load the website."
     return " ".join(reason.split())
 
 
